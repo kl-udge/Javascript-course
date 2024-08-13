@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If & Booleans</title>
+</head>
+<body>
+
+    <script>
+        console.log( 3 < 5 );
+        console.log( 3 > 5);
+
+        if(true) {
+            console.log('Hello');
+        }
+
+        if (false) {
+            console.log('Hello');
+        } 
+        else {
+            console.log('Hi there');
+        }
+
+        let ageLimit = 16;
+        let nearLimit = 14;
+        let driverAge = 15;
+
+        if (driverAge >= ageLimit) {
+            console.log('Authorized to drive');
+        } else if (driverAge >= nearLimit) {
+            console.log('almost there!');
+        } else {
+            console.log('not authorized to drive');
+        }
+
+        // truthy and falsy values
+        cartProducts = 5;
+
+        if (cartProducts) {
+            console.log('Cart has products');
+        }
+
+    </script>
+
+</body>
+</html>

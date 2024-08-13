@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Variable project</title>
+</head>
+<body>
+    <button onclick="console.log(`Cart quantity: ${cartQuantity}`)">Show Quantity</button>
+    <button onclick="cartQuantity++; console.log(`Cart quantity: ${cartQuantity}`)">Add to Cart</button>
+    <button onclick="cartQuantity +=2; console.log(`Cart quantity: ${cartQuantity}`)">+2</button>
+    <button onclick="cartQuantity +=3; console.log(`Cart quantity: ${cartQuantity}`)">+3</button>
+    <button onclick="cartQuantity = 0; console.log('cart was reset!'); console.log(`Cart quantity: ${cartQuantity}`)">Reset Cart</button>
+    <script>
+        let cartQuantity= 0;
+
+        let name = 'Parmenas Munene';
+        console.log(name);
+        console.log(`My name is ${name}`);
+
+        let coffee = 5;
+        let bagels = 3;
+        let soup = 9;
+        bagels *=2;
+        
+        let cost = bagels + soup + coffee;
+        let tax = cost * 0.1;
+        console.log(cost);
+        console.log(`Cost of food: $${cost}`); 
+        console.log(tax);
+        console.log(`Tax: $${tax}`);
+    </script>
+</body>
+</html>
