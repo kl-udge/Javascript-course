@@ -1,0 +1,46 @@
+<!-- Checking people who are eligible for discounts during holidays -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Checker</title>
+</head>
+<body>
+
+    <p>How old are you?</p>
+    <button onclick="initializePayment(2);">2</button>
+    <button onclick="initializePayment(3);">3</button>
+    <button onclick="initializePayment(5);">5</button>
+    <button onclick="initializePayment(40);">40</button>
+    <button onclick="initializePayment(72);">72</button>
+    <button onclick="initializePayment(80);">80</button>
+
+
+    <script>
+
+        function initializePayment(age) {
+            const isHoliday = false
+            let message = '';
+            
+            if(isHoliday) {
+                if(age <= 6 || age >= 65) {
+                    message = 'Youre getting a discount';
+                } else {
+                    message = 'No discount';
+                }
+            } else {
+                if(age <= 6 || age >= 65) {
+                    message = 'Youre eligible for a discount please wait for the holidays';
+                } else {
+                    message = 'youre not eligible for a discount';
+                }
+            }
+
+            alert(`${message}`)
+        }
+
+    </script>
+</body>
+</html>

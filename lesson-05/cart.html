@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<body>
+    <p>Click the button to add items to cart</p>
+    <button onclick="addToCart();">Add to cart</button>
+
+    <script>
+        let cart = 0;
+        let items = 0;
+
+        function addToCart() {
+            cart = items +=1;
+
+            if(cart > 10) {
+                alert('You have reached the maximun number of items you can have in your cart');
+            } else {
+                alert('item added to cart');
+            }
+
+            
+            console.log(cart);
+        }
+        
+    </script>
+</body>
+</html>

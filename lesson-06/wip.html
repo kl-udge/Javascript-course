@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    
+    <script>
+        // accessing objects using the dot notation
+        const products = {
+            name: 'socks',
+            price: `$40`,
+            shop: 'JaydenKyle collections'
+        };
+
+        console.log(products);
+        console.log(products.name);
+        console.log(products.price);
+
+        products.name = 'cotton wool Socks';
+
+        console.log(products.name);
+        console.log(products);
+
+        // accessing objects usiing the brackets notation
+        const product2 = {
+            name: 'shirt',
+            price: `$50`,
+            'deliverly-time': `1 day`
+        };
+
+        console.log(product2['deliverly-time']);
+
+        // nesting objects in objects
+        const product3 = {
+            name: 'trousers',
+            price: `$65`,
+            rating: {
+                stars: 4,
+                counts: 78
+            }
+        };
+
+        // Functions in an object
+        // A function within an object is called a method
+        const product4 = {
+            name: 'Hoodie',
+            price: `$46`,
+            shop: 'JaydenKyleCollections',
+            rating: {
+                stars: 5,
+                counts: 89
+            },
+
+            fun: function function1() {
+                console.log('function within an object');
+            }
+
+            // key: function function1() {
+            //     console.log('You can use any keywird to name the funnction i.e the previous one was fun this one is key.');
+            // }
+        }
+
+        console.log(product4);
+        product4.fun();
+
+
+        // JS inBuilt objects i.e JSON & localStorage
+        // JSON
+        const objectToJson = JSON.stringify(product4);
+        console.log(objectToJson);
+
+        const jsonToObject = JSON.parse(objectToJson);
+        console.log(jsonToObject);
+
+        // localStorage
+        localStorage.setItem('name', 'Parmenas Munene');
+        console.log(localStorage.getItem('name'));
+
+        localStorage.getItem('name');
+        localStorage.removeItem('name');
+        // end localStorage
+
+
+        const object1 = {
+            message: 'hello'
+        }
+        const object2 = object1;
+        console.log(object2);
+        console.log(object1 === object2);
+
+        object3 = {
+            message: 'hello'
+        };
+        console.log(object1 === object3);
+
+
+        const object4 = {
+            message: 'Good Job!'
+        };
+        const { message } = object4
+
+    </script>
+</body>
+</html>m

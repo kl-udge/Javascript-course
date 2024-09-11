@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinFlip</title>
+</head>
+<body>
+    <p>Lets play</p>
+    <button>Flip Coin</button>
+
+    <script>
+        let var1 = Math.random();
+        let result = '';
+        let guess = 'tails'
+
+        // if(var1 < 0.5) {
+        //     result = 'heads';
+        // } else {
+        //     result = 'tails';
+        // }
+
+        var1 < 0.5 ? result = 'heads' : result = 'tails';
+
+        console.log(result);
+
+        // if(result === guess) {
+        //     console.log('you won');
+        // } else if(result !== guess) {
+        //     console.log('you lost');
+        // }
+
+        guess === result ? console.log('you won!') : console.log('you lost');
+
+    </script>
+</body>
+</html>

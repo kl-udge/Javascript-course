@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+
+    <style>
+        .btn__container {
+            background-color: rgb(230, 230, 230);
+            width: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 30px;
+            border-radius: 50px;
+            margin: 20% auto;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        .text {
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .toggle {
+            height: 30px;
+            width: 30px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: rgb(103, 95, 95);
+        }
+
+        .is-toggled {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .toggled-on {
+            margin-left: 3px;
+            background-color: rgb(62, 224, 62);
+        }
+    </style>
+</head>
+<body>
+    <div class="btn__container js-contaianer-el">
+        <p class="text js-toggle-on"></p>
+        <button class="toggle js-toggle" onclick="handletoggle();"></button>
+        <p class="text js-toggle-off"></p>
+    </div>
+
+
+    <script>
+        function handletoggle() {
+            const containerElement = document.querySelector('.js-contaianer-el')
+            const buttonElement = document.querySelector('.js-toggle');
+            let onToggle = document.querySelector('.js-toggle-on');
+            let offToggle = document.querySelector('.js-toggle-off');
+
+            containerElement.classList.add('is-toggled');
+
+            if (containerElement.classList.contains('is-toggled')) {
+                onToggle.innerHTML = 'ON';
+                buttonElement.classList.add('toggled-on');
+            } else {
+                offToggle.innerHTML = 'OFF';
+                containerElement.classList.remove('is-toggled');
+                buttonElement.classList.remove('is-toggled');
+            }
+        }
+    </script>
+</body>
+</html>
