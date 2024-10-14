@@ -60,14 +60,21 @@
 
         console.log(total);
 
+        const numsTest = [10, 20, 30];
+        numsTest[2] = 99;
+        console.log(numsTest);
 
-        const numbers = [10, 20, 30];
-        numbers[2] = 99;
-        console.log(numbers);
+        function getLastValue(arr) {
+            for (i = 0; i < arr.length; i++) {
+                let values = arr[i];
+                const lastIndex = values.length -1;
+                console.log(lastIndex);
+            }
+        }
+        getLastValue([56, 2, 78])
 
-        function getLastValue(array) {
-            let lastIndex = array.index -1;
-            
+        for (i = 0; i < 10; i += 2) {
+            console.log(i);
         }
 
     </script>

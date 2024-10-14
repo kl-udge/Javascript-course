@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <script>       
+        function greetings() {
+            console.log('hello');
+        }
+        greetings();
+        
+
+        const function1 = function() {
+            console.log('Hello2');
+        }
+        console.log(function1);
+        console.log(typeof(function1));
+        function1();
+
+
+        const object1 = {
+            num: 2,
+            fun: function() {
+                console.log('Hello3');
+            }
+        }
+        object1.fun();
+
+
+        setTimeout(function() {
+            console.log('Timeout');
+        }, 3000)
+        console.log('next line')
+
+
+        setInterval(function() {
+            console.log('interval');
+        }, 3000);
+        console.log('Next line 2')
+    </script>
+</body>
+</html>

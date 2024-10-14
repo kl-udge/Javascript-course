@@ -12,7 +12,10 @@ function renderTodoItems() {
 
     for(let i = 0; i < todoItems.length; i++) {
         const value = todoItems[i];
-        const todoHTMLEl = `<p>${value}</p>`;
+        const todoHTMLEl = `<p>${value} 
+        <button onclick="todoItems.splice(${i}, 1); renderTodoItems();">Delete</button>
+        </p>`
+        ;
 
         todoListHTML += todoHTMLEl;
     }
@@ -24,7 +27,7 @@ function renderTodoItems() {
  
 function addTodoItem () {
     const inputElement = document.querySelector('.js-input-element');
-    const name = inputElement.value;
+    let name = inputElement.value;
     
     todoItems.push(name);
     renderTodoItems();
